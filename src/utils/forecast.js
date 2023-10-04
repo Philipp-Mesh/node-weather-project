@@ -11,7 +11,7 @@ const forecast = (lat,long,callback) => {
             callback('Cannot find location on weather service.',undefined)
         } else {
 
-            callback(undefined,'The current temperature is '+ body.current.temperature +' and it is '+ body.current.weather_descriptions[0] +'.\nIt feels like: '+ body.current.feelslike+' degrees Celsius')
+            callback(undefined,'The current temperature is '+ body.current.temperature +' and it is '+ body.current.weather_descriptions[0] +'. It feels like: '+ body.current.feelslike+' degrees Celsius. The wind speed is '+ body.current.wind_speed+' mph and it is coming from the '+ body.current.wind_dir+'.')
 
             // callback(undefined,{
             //     ct : response.body.current.temperature,
